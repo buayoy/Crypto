@@ -30,6 +30,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 // Toast
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
+import { TestComponent } from './page/test/test.component';
+import { MarketApiService } from './service/market-api.service';
+import { DataProfileService } from './service/data-profile.service';
+import { CoinTableComponent } from './page/coin-table/coin-table.component';
 
 
 
@@ -45,7 +49,9 @@ import {ToastModule} from 'ng2-toastr/ng2-toastr';
     ForgotComponent,
     DashboardComponent,
     AccountComponent,
-    PoolComponent
+    PoolComponent,
+    TestComponent,
+    CoinTableComponent
   ],
   imports: [
     BrowserModule,
@@ -54,18 +60,21 @@ import {ToastModule} from 'ng2-toastr/ng2-toastr';
     HttpClientModule,
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp({
-        apiKey: "AIzaSyBM0RzKCpN-wuGueTi5KjSaSFQgR3p1Kug",
-        authDomain: "blockchain-a.firebaseapp.com",
-        databaseURL: "https://blockchain-a.firebaseio.com",
-        projectId: "blockchain-a",
-        storageBucket: "blockchain-a.appspot.com",
-        messagingSenderId: "209725170616"
+      apiKey: "AIzaSyDFDjA8TazU8H1zOjG-virmtpYOVrdTJDk",
+      authDomain: "test-palm.firebaseapp.com",
+      databaseURL: "https://test-palm.firebaseio.com",
+      projectId: "test-palm",
+      storageBucket: "test-palm.appspot.com",
+      messagingSenderId: "54624292466"
     }),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     ToastModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    MarketApiService,
+    DataProfileService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
