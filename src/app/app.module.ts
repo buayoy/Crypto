@@ -34,6 +34,7 @@ import { TestComponent } from './page/test/test.component';
 import { MarketApiService } from './service/market-api.service';
 import { DataProfileService } from './service/data-profile.service';
 import { CoinTableComponent } from './page/coin-table/coin-table.component';
+import { HeaderComponent } from './layout/header/header.component';
 
 
 
@@ -51,7 +52,8 @@ import { CoinTableComponent } from './page/coin-table/coin-table.component';
     AccountComponent,
     PoolComponent,
     TestComponent,
-    CoinTableComponent
+    CoinTableComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
