@@ -6,6 +6,7 @@ import { ForgotComponent } from "./page/forgot/forgot.component";
 import { DashboardComponent } from "./page/dashboard/dashboard.component";
 import { AccountComponent } from "./page/account/account.component";
 import { PoolComponent } from "./page/pool/pool.component";
+import { HashComponent } from "./page/hash/hash.component";
 
 
 export const routes: Routes = [
@@ -16,4 +17,5 @@ export const routes: Routes = [
     { path:'dashboard', component: DashboardComponent },
     { path:'account', component: AccountComponent },
     { path:'pool', component: PoolComponent },
+    { path:'hash', component: HashComponent },
   ];

@@ -36,6 +36,7 @@ import { DataProfileService } from './service/data-profile.service';
 import { CoinTableComponent } from './page/coin-table/coin-table.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { SiteSearchComponent } from './layout/site-search/site-search.component';
+import { HashComponent } from './page/hash/hash.component';
 
 
 
@@ -55,7 +56,8 @@ import { SiteSearchComponent } from './layout/site-search/site-search.component'
     TestComponent,
     CoinTableComponent,
     HeaderComponent,
-    SiteSearchComponent
+    SiteSearchComponent,
+    HashComponent
   ],
   imports: [
     BrowserModule,

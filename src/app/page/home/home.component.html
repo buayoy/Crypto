@@ -1083,23 +1083,7 @@
                             </script>
                         </div>                               
                         </div>
-                        <div class="col-md-6">
-                            <div class="wt-box graph-part-right text-white">
-                                <strong class="text-uppercase title-first">cryptocurrency</strong>
-                                <span class="text-uppercase text-primary display-block title-second">Start selling, buying and trading</span>
-                                <p>
-                                <strong>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                                 type and scrambled it to make a type specimen book. the industry's standard dummy text ever since the 1500s, when an unknown printer took Dummy text of the printing and typesetting industry. Text of the printing</strong>
-                                 </p>
-                                <ul class="list-check-circle primary">
-                                    <li>Simply dummy text of the Lorem Ipsum is printing and type setting. </li>
-                                    <li>Dummy text of the printing and typesetting industry. Text of the printing</li>
-                                    <li>And typesetting industry Lorem Ipsum has been. Ipsum has been the </li>
-                                    <li>Industry's standard dummy since the 1500s, </li>
-                                    <li>Simply dummy text of the Lorem Ipsum is printing and type setting. </li>
-                                </ul>
-                            </div>
-                        </div>
+                        
                     </div>
                 
             </div>
@@ -1120,71 +1104,26 @@
                     <table class="col-md-12 table-bordered table-striped table-condensed cf wt-responsive-table text-black">
                         <thead class="cf">
                             <tr>
-                                <th>Cryptocurrency</th>
-                                <th>Price</th>
-                                <th class="numeric">24h % Change</th>
-                                <th class="numeric">24h Volume (coin)</th>
-                                <th class="numeric">Supply</th>
-                            </tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Coin Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">market cap</th>
+                                <th scope="col">volume(24h)</th>
+                                <th scope="col">change(24h)</th>
+                                <th scope="col">price graph(7d)</th>
+                              </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-title="Code"><img src="images/coin-icon/bitcoin.png" class="p-r10" alt=""> Bitcoin</td>
-                                <td data-title="Company">9,290.06 $</td>
-                                <td data-title="Price" class="numeric">14.44%</td>
-                                <td data-title="Change" class="numeric">218,087 BTC</td>
-                                <td data-title="Change %" class="numeric">923,629</td>
+                            <tr *ngFor="let market of markets; let i=index">
+                              <th scope="row">{{market.rank}}</th>
+                              <td><a href="https://coinmarketcap.com/currencies/{{market.website_slug}}">{{market.name}}</a></td>
+                              <td>{{market.quotes.USD.price}}</td>
+                              <td>{{market.quotes.USD.market_cap | currency:'USD':true:'4.0'}}</td>
+                              <td>{{market.quotes.USD.volume_24h}}</td>
+                              <td>{{market.quotes.USD.percent_change_24h}}</td>
+                              <td>{{market.quotes.USD.percent_change_24h}}</td>
                             </tr>
-                            <tr>
-                                <td data-title="Code"><img src="images/coin-icon/monero.png" class="p-r10" alt=""> Monero</td>
-                                <td data-title="Company">407.13 $</td>
-                                <td data-title="Price" class="numeric">16.17%</td>
-                                <td data-title="Change" class="numeric">1,223,367 ETH</td>
-                                <td data-title="Change %" class="numeric">663,133</td>
-                            </tr>
-                            <tr>
-                                <td data-title="Code"><img src="images/coin-icon/DigitalCash.png" class="p-r10" alt=""> DigitalCash</td>
-                                <td data-title="Company">7.47 $</td>
-                                <td data-title="Price" class="numeric">-1.09%</td>
-                                <td data-title="Change" class="numeric">3,352 XUC</td>
-                                <td data-title="Change %" class="numeric">427,132</td>
-                            </tr>
-                            <tr>
-                                <td data-title="Code"><img src="images/coin-icon/Veritaseum.png" class="p-r10" alt=""> Veritaseum</td>
-                                <td data-title="Company">0.22 $</td>
-                                <td data-title="Price" class="numeric">20.80%</td>
-                                <td data-title="Change" class="numeric">211,418,299 XRP</td>
-                                <td data-title="Change %" class="numeric">719,280</td>
-                            </tr>
-                            <tr>
-                                <td data-title="Code"><img src="images/coin-icon/ripple.png" class="p-r10" alt=""> Ripple</td>
-                                <td data-title="Company">84.22 $</td>
-                                <td data-title="Price" class="numeric">-14.56%</td>
-                                <td data-title="Change" class="numeric">36 VERI</td>
-                                <td data-title="Change %" class="numeric">218,887</td>
-                            </tr>
-                            <tr>
-                                <td data-title="Code"><img src="images/coin-icon/Exchange-_union.png" class="p-r10" alt=""> Exchange Union</td>
-                                <td data-title="Company">709.31 $</td>
-                                <td data-title="Price" class="numeric">-1.18%</td>
-                                <td data-title="Change" class="numeric">125,361 DASH</td>
-                                <td data-title="Change %" class="numeric">427,132</td>
-                            </tr>
-                            <tr>
-                                <td data-title="Code"><img src="images/coin-icon/Ethereum.png" class="p-r10" alt=""> Ethereum</td>
-                                <td data-title="Company">78.97 $</td>
-                                <td data-title="Price" class="numeric">20.55% </td>
-                                <td data-title="Change" class="numeric">2,281,288 LTC</td>
-                                <td data-title="Change %" class="numeric">719,280</td>
-                            </tr>
-                            <tr>
-                                <td data-title="Code"><img src="images/coin-icon/litecoin.png" class="p-r10" alt=""> Litecoin</td>
-                                <td data-title="Company">156.32 $</td>
-                                <td data-title="Price" class="numeric">1.18%</td>
-                                <td data-title="Change" class="numeric">255,226 XMR</td>
-                                <td data-title="Change %" class="numeric">218,887</td>
-                            </tr>
-                        </tbody>
+                          </tbody>
                     </table>
                 </div>                                   
             </div>
@@ -1635,41 +1574,7 @@
     
     <!-- BUTTON TOP START -->
     <button class="scroltop"><span class=" iconmoon-house relative" id="btn-vibrate"></span>Top</button>
-
-    <!-- MODAL  LOGIN -->
-    <div id="Login-form" class="modal fade " role="dialog">
-      <div class="modal-dialog modal-sm">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header bg-primary">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title text-white">Login Your Account</h4>
-          </div>
-          <div class="modal-body p-a30">
-            <form id="log-form">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input class="form-control" placeholder="Enter Username" type="text">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                        <input class="form-control" placeholder="Enter email" type="email">
-                    </div>
-                </div>
-                <button type="button" class="site-button-secondry text-uppercase btn-block m-b10">Submit</button>
-                <span class="font-12">Don't have an account? <a href="javascript:;" class="text-primary">Register Here</a></span>
-            </form>
-          </div>
-          <div class="modal-footer text-center">
-            <div class="text-center"><img src="images/logo.png" alt=""></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-   <app-login></app-login>
+    <app-login></app-login>
+    <app-register></app-register>
     
 </div>
