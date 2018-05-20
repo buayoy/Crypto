@@ -1,53 +1,151 @@
 <div class="section-full text-center p-tb50">
   <div class="container">
-      
-      <div class="section-content">
-          <div class="p-b30">
-              <h3>Wishlist</h3>
-              <div class="wt-separator-outer">
-              <div class="wt-separator bg-primary"></div>
+
+    <div class="section-content">
+      <div class="p-b30">
+        <h3>EX miner --server zec.suprnova.cc --pool suprnova.1 --pass x --port 2142
+
+        </h3>
+        <div class="wt-separator-outer">
+          <div class="wt-separator bg-primary"></div>
+        </div>
+      </div>
+
+      <!-- FROM STYEL 1 -->
+      <div class="col-md-6 m-b30">
+        <div class="section-head">
+          <h3 class="text-uppercase">poolname:string; urlmining:string; port:string; walkerpass:string;</h3>
+          <div class="wt-separator-outer">
+            <div class="wt-separator bg-primary"></div>
           </div>
+        </div>
+     
+
+        <div class="wt-box">
+          <form>
+
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <label>mining server</label>
+                  <input [(ngModel)]="pool.urlmining" type="text" class="form-control" placeholder="mining server">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <label>Username</label>
+                  <input [(ngModel)]="pool.walkername" type="text" class="form-control" placeholder="Your Zcash Address or Web Username ">
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <label>Password</label>
+                  <input [(ngModel)]="pool.walkerpass" type="text" class="form-control" placeholder="Password">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input [(ngModel)]="pool.miningtool" type="text" class="form-control" placeholder="Password">
+                    </div>
+                  </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="form-group">
+                        <label>Stratum Port</label>
+                        <input [(ngModel)]="pool.port" type="text" class="form-control" placeholder="Stratum Port">
+                      </div>
+                    </div>
+                </div>
+          
+
+            <!-- <div class="form-group form-inline">
+              <div class="radio">
+                <input id="checkmeout1" name="Public" value="checkmeout" type="checkbox">
+                <label for="checkmeout1">Ship to the same address</label>
+              </div>
+            </div> -->
+
+            <button (click)='mining(pool)' type="submit" value="submit" class="site-button">Save and Deliver Here</button>
+
+          </form>
+        </div>
+      </div>
+      <br>
+      <!-- 24. SEARCH -->
+      <!-- <div class="widget bg-white  monster-widget-placeholder-11 widget_search">
+        <h4 class="widget-title">Search</h4>
+        <form action="/" class="searchform" id="searchform" method="get" role="search">
+          <div>
+            <label for="s" class="screen-reader-text">Search for:</label>
+            <input type="text" id="s" name="s" value="">
+            <input type="submit" value="Search" id="searchsubmit">
           </div>
-          <div id="no-more-tables">
-              <table class="table-bordered  table-condensed cf wt-responsive-table shopping-table">
-                  <thead class="cf text-center bg-primary">
-                      <tr>
-                          <th>IMAGE</th>
-                          <th>PRODUCT NAME</th>
-                          <th class="numeric">UNIT PRICE</th>
-                          <th class="numeric">STOCK STATUS</th>
-                          <th class="numeric">TOTAL</th>
-                          <th class="numeric">REMOVE</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td data-title="Code"><img src="images/cart/thumb/pic-2.jpg" alt=""></td>
-                          <td data-title="Company">Prduct Item 1</td>
-                          <td data-title="Price" class="numeric">$35.00</td>
-                          <td data-title="Change" class="numeric">In Stock</td>
-                          <td data-title="Change %" class="numeric"><button class="site-button radius-sm" type="button">Add to Cart</button></td>
-                          <td data-title="Open" class="numeric"><a href="#"><i class="fa fa-times"></i></a></td>
-                      </tr>
-                      <tr>
-                          <td data-title="Code"><img src="images/cart/thumb/pic-3.jpg" alt=""></td>
-                          <td data-title="Company">Prduct Item 2</td>
-                          <td data-title="Price" class="numeric">$15.00</td>
-                          <td data-title="Change" class="numeric">In Stock</td>
-                          <td data-title="Change %" class="numeric"><button class="site-button radius-sm" type="button">Add to Cart</button></td>
-                          <td data-title="Open" class="numeric"><a href="#"><i class="fa fa-times"></i></a></td>
-                      </tr>
-                      <tr>
-                          <td data-title="Code"><img src="images/cart/thumb/pic-4.jpg" alt=""></td>
-                          <td data-title="Company">Prduct Item 13</td>
-                          <td data-title="Price" class="numeric">$28.00</td>
-                          <td data-title="Change" class="numeric">In Stock</td>
-                          <td data-title="Change %" class="numeric"><button class="site-button radius-sm" type="button">Add to Cart</button></td>
-                          <td data-title="Open" class="numeric"><a href="#"><i class="fa fa-times"></i></a></td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
+        </form>
+      </div> -->
+      <br>
+      <div id="no-more-tables">
+        <table class="table-bordered  table-condensed cf wt-responsive-table shopping-table">
+          <thead class="cf text-center bg-primary">
+            <tr>
+
+              <th>PRODUCT NAME</th>
+              <th class="numeric">UNIT PRICE</th>
+              <th class="numeric">STOCK STATUS</th>
+              <th class="numeric">TOTAL</th>
+              <th class="numeric">REMOVE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+
+              <td data-title="Company">Prduct Item 1</td>
+              <td data-title="Price" class="numeric">$35.00</td>
+              <td data-title="Change" class="numeric">In Stock</td>
+              <td data-title="Change %" class="numeric">
+                <button class="site-button radius-sm" type="button">Add to Cart</button>
+              </td>
+              <td data-title="Open" class="numeric">
+                <a href="#">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td data-title="Company">Prduct Item 2</td>
+              <td data-title="Price" class="numeric">$15.00</td>
+              <td data-title="Change" class="numeric">In Stock</td>
+              <td data-title="Change %" class="numeric">
+                <button class="site-button radius-sm" type="button">Add to Cart</button>
+              </td>
+              <td data-title="Open" class="numeric">
+                <a href="#">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td data-title="Company">Prduct Item 13</td>
+              <td data-title="Price" class="numeric">$28.00</td>
+              <td data-title="Change" class="numeric">In Stock</td>
+              <td data-title="Change %" class="numeric">
+                <button class="site-button radius-sm" type="button">Add to Cart</button>
+              </td>
+              <td data-title="Open" class="numeric">
+                <a href="#">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
   </div>

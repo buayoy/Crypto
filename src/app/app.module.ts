@@ -26,8 +26,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
 // for AngularFireDatabase
-import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
-import { AngularFireDatabase } from 'angularfire2/database-deprecated';
+
 // Toast
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import { TestComponent } from './page/test/test.component';
@@ -37,6 +36,8 @@ import { CoinTableComponent } from './page/coin-table/coin-table.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { SiteSearchComponent } from './layout/site-search/site-search.component';
 import { HashComponent } from './page/hash/hash.component';
+import { LodingComponent } from './layout/loding/loding.component';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 
@@ -57,7 +58,8 @@ import { HashComponent } from './page/hash/hash.component';
     CoinTableComponent,
     HeaderComponent,
     SiteSearchComponent,
-    HashComponent
+    HashComponent,
+    LodingComponent
   ],
   imports: [
     BrowserModule,
