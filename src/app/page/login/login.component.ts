@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
-import { NgModule } from '@angular/core';
+
 import { Routes,
      RouterModule, 
      Router,
@@ -13,7 +13,7 @@ import { ToastsManager } from 'ng2-toastr';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user:User = { email:'email',password:'password',}
+  user:User = { email:'email',password:'password'}
 
   constructor(private route: ActivatedRoute,
               public toastr: ToastsManager, vcr: ViewContainerRef,
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   loginpass(user){
     this.angularFireAuth.auth.signInWithEmailAndPassword(this.user.email,this.user.password).then(res=>{
       console.log(res);
-      this.router.navigate(['/hash'])
+      this.router.navigate(['hash'])
     }).catch(e=>{
       this.toastr.error(e,'opps!',{
         toastLife: 3000 , showCloseButton: true

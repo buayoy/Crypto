@@ -14,7 +14,7 @@ export class DataProfileService {
     return this.database.list('/profile').push(profile);
   }
 
-  mining(pool:Pool){
+  saveaddress(pool:Pool){
     return this.database.list('/pool').push(pool);
   }
 

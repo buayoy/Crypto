@@ -1,5 +1,6 @@
 export interface Pool{
-    miningtool:string;
+    address:string;
+    poolname:string;
     urlmining:string;
     port:string;
     walkername:string;

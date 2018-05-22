@@ -14,9 +14,7 @@ export class HomeComponent implements OnInit {
       let objs = res.data;
 
       let arr = Object.keys(objs).map((index) => objs[index]);
-    
-      console.log("array",arr);
-
+  
       let sorts = arr.sort((a,b)=> a.rank - b.rank );
 
       let arr2 = sorts.filter(rank => rank.rank <= 10);

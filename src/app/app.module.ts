@@ -11,7 +11,6 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SlidebarComponent } from './layout/slidebar/slidebar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './page/home/home.component';
-import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 import { ForgotComponent } from './page/forgot/forgot.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
@@ -37,8 +36,9 @@ import { HeaderComponent } from './layout/header/header.component';
 import { SiteSearchComponent } from './layout/site-search/site-search.component';
 import { HashComponent } from './page/hash/hash.component';
 import { LodingComponent } from './layout/loding/loding.component';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { HashService } from './service/hash.service';
+import { LoginComponent } from './page/login/login.component';
 
 
 
@@ -79,7 +79,7 @@ import { HashService } from './service/hash.service';
     }),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    ToastModule.forRoot()
+    ToastModule.forRoot(),
   ],
   providers: [
     MarketApiService,
