@@ -9,3 +9,4 @@ export class ApihashService {
   apiAPI(cal:Api){
     return this.http.get('https://www.cryptonator.com/rates/convert/?amount'+cal.amount+'&primary='+cal.crypto1+'&secondary='+cal.crypto2);
 }
+}
