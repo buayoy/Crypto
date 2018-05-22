@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {  AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable} from 'angularfire2/database-deprecated';
+import {  AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database-deprecated';
+
 import { Pool } from '../page/model/pool';
 import { Profile } from '../page/model/profile';
 

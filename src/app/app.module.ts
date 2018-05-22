@@ -38,6 +38,8 @@ import { SiteSearchComponent } from './layout/site-search/site-search.component'
 import { HashComponent } from './page/hash/hash.component';
 import { LodingComponent } from './layout/loding/loding.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { HashService } from './service/hash.service';
+
 
 
 
@@ -82,6 +84,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
   providers: [
     MarketApiService,
     DataProfileService,
+    HashService
   ],
   bootstrap: [AppComponent]
 })
