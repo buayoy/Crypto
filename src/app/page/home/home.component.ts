@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
 
       let arr2 = sorts.filter(rank => rank.rank <= 10);
 
+      
       this.markets = arr2
 
       

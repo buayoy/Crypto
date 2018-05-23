@@ -12,11 +12,12 @@ headers = headers.set('Content-Type','application/json').set('Access-Control-All
 export class MarketApiService {
 
   constructor(private http:HttpClient) { }
-api=Api
 
   getcurrency(){
     return this.http.get(root);
   }
+  
+  
   
   getcurrencies(){
     return this.http.get('https://api.coinmarketcap.com/v2/ticker/');

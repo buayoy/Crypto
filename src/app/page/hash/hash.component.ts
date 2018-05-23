@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { DataProfileService } from '../../service/data-profile.service';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { Observable } from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-hash',
@@ -19,6 +20,7 @@ export class HashComponent implements OnInit {
   history:Pool[]=[] ;
   walkername='';
   address='';
+  root='https://api-zcash.flypool.org/miner/';
   pools:Pool[] = [
     { 
       poolname:'fly',
@@ -46,6 +48,7 @@ export class HashComponent implements OnInit {
     }
   ] ;
   constructor(
+              private http:HttpClient,
               private router: Router,
               private angularFireAuth:AngularFireAuth,
               private database:AngularFireDatabase,
@@ -53,6 +56,7 @@ export class HashComponent implements OnInit {
 
   ) {}
 
+  
   ngOnInit() {
     this.service.list().subscribe(list=>{
       this.history=list
@@ -75,8 +79,11 @@ export class HashComponent implements OnInit {
     address: this.address,
     walkername: this.walkername,
     walkerpass: pool.walkerpass,
+
+    
   }
   this.service.saveaddress(historyPool)
+  
 }
 
 
