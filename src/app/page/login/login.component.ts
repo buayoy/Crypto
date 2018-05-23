@@ -20,8 +20,7 @@ export class LoginComponent implements OnInit {
               private router: Router,
               private angularFireAuth:AngularFireAuth) {
                 
-                this.toastr.setRootViewContainerRef(vcr)
-                this.toastr.success('You are awesome!', 'Wellcom');
+                
   }
   ngOnInit() {
   }

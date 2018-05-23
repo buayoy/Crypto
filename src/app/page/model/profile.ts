@@ -5,5 +5,6 @@ export interface Profile{
     email:string;
     wallet:string;
     username:string;
+    tootool:string;
     poolname:Pool;
 }
