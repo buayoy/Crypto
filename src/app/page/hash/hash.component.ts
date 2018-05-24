@@ -23,7 +23,7 @@ export class HashComponent implements OnInit {
   root='https://api-zcash.flypool.org/miner/';
   pools:Pool[] = [
     { 
-      poolname:'fly',
+      poolname:'flypool',
       urlmining: 'eu1-zcash.flypool.org',
       port:'3333',
       address: '',
@@ -31,7 +31,7 @@ export class HashComponent implements OnInit {
       walkerpass: 'x',
     },
     { 
-      poolname:'nano',
+      poolname:'nanopool',
       urlmining: 'zec-eu1.nanopool.org',
       port:'6666',
       address: '',
@@ -39,7 +39,7 @@ export class HashComponent implements OnInit {
       walkerpass: 'x',
     },
     { 
-      poolname:'dwarf',
+      poolname:'dwarfpool',
       urlmining: ' zec-eu1.dwarfpool.com ',
       port: '3333',
       address: '',

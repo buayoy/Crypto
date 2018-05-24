@@ -39,6 +39,7 @@ import { LodingComponent } from './layout/loding/loding.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { HashService } from './service/hash.service';
 import { LoginComponent } from './page/login/login.component';
+import { MiningComponent } from './layout/mining/mining.component';
 
 
 
@@ -61,7 +62,8 @@ import { LoginComponent } from './page/login/login.component';
     HeaderComponent,
     SiteSearchComponent,
     HashComponent,
-    LodingComponent
+    LodingComponent,
+    MiningComponent
   ],
   imports: [
     BrowserModule,
