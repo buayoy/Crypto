@@ -40,6 +40,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { HashService } from './service/hash.service';
 import { LoginComponent } from './page/login/login.component';
 import { MiningComponent } from './layout/mining/mining.component';
+import { WhattomineComponent } from './page/whattomine/whattomine.component';
+import { Test2Component } from './page/test2/test2.component';
+import { WhattomineService } from './service/whattomine.service';
 
 
 
@@ -63,7 +66,9 @@ import { MiningComponent } from './layout/mining/mining.component';
     SiteSearchComponent,
     HashComponent,
     LodingComponent,
-    MiningComponent
+    MiningComponent,
+    WhattomineComponent,
+    Test2Component
   ],
   imports: [
     BrowserModule,
@@ -86,7 +91,8 @@ import { MiningComponent } from './layout/mining/mining.component';
   providers: [
     MarketApiService,
     DataProfileService,
-    HashService
+    HashService,
+    WhattomineService
   ],
   bootstrap: [AppComponent]
 })

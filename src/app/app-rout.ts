@@ -7,6 +7,9 @@ import { DashboardComponent } from "./page/dashboard/dashboard.component";
 import { AccountComponent } from "./page/account/account.component";
 import { PoolComponent } from "./page/pool/pool.component";
 import { HashComponent } from "./page/hash/hash.component";
+import { TestComponent } from "./page/test/test.component";
+import { Test2Component } from "./page/test2/test2.component";
+import { WhattomineComponent } from "./page/whattomine/whattomine.component";
 
 
 export const routes: Routes = [
@@ -18,4 +21,7 @@ export const routes: Routes = [
     { path:'account', component: AccountComponent },
     { path:'pool', component: PoolComponent },
     { path:'hash', component: HashComponent },
+    { path:'test', component: TestComponent },
+    { path:'whattomine', component: Test2Component },
+    { path:'test2',component: WhattomineComponent},
   ];

@@ -19,7 +19,7 @@ export class CoinTableComponent implements OnInit {
 
       let sorts = arr.sort((a,b)=> a.rank - b.rank );
 
-      let arr2 = sorts.filter(rank => rank.rank <= 10);
+      let arr2 = sorts.filter(rank => rank.rank <= 20);
 
       this.markets = arr2
 

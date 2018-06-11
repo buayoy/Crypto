@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Calculate } from '../page/model/calculate';
 
-let key = "3f54efbe4547baf8dac092002d685b81";
+// let key = "3f54efbe4547baf8dac092002d685b81";
 let root = "https://api.coinmarketcap.com/v2/ticker/";
 let headers = new HttpHeaders();
 headers = headers.set('Content-Type','application/json').set('Access-Control-Allow-Origin','*')
