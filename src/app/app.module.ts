@@ -43,6 +43,7 @@ import { MiningComponent } from './layout/mining/mining.component';
 import { WhattomineComponent } from './page/whattomine/whattomine.component';
 import { Test2Component } from './page/test2/test2.component';
 import { WhattomineService } from './service/whattomine.service';
+import { Test3Component } from './page/test3/test3.component';
 
 
 
@@ -68,7 +69,8 @@ import { WhattomineService } from './service/whattomine.service';
     LodingComponent,
     MiningComponent,
     WhattomineComponent,
-    Test2Component
+    Test2Component,
+    Test3Component
   ],
   imports: [
     BrowserModule,

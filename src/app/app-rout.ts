@@ -10,6 +10,7 @@ import { HashComponent } from "./page/hash/hash.component";
 import { TestComponent } from "./page/test/test.component";
 import { Test2Component } from "./page/test2/test2.component";
 import { WhattomineComponent } from "./page/whattomine/whattomine.component";
+import { Test3Component } from "./page/test3/test3.component";
 
 
 export const routes: Routes = [
@@ -24,4 +25,5 @@ export const routes: Routes = [
     { path:'test', component: TestComponent },
     { path:'whattomine', component: Test2Component },
     { path:'test2',component: WhattomineComponent},
+    { path:'test3',component: Test3Component},
   ];
